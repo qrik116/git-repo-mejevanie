@@ -21,6 +21,12 @@ $(function(){
 
 	$(".phone").mask("+7 (999) 999-99-99");
 
+	$('.number').bind("change keyup input click", function() {
+    if (this.value.match(/[^0-9]/g)) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    }
+	});
+
 	$('.section .btn').on('click', function(event) {
 		event.preventDefault();
 		var $this = $(this);
@@ -41,19 +47,6 @@ $(function(){
 		}
 	});
 
-	$('.section .section-pagination li a').on('click', function(event) {
-		event.preventDefault();
-		var $this = $(this).parent();
-		// $this.animate({
-		// 	'transform': 'translate('+  +')',
-		// 	param2: value2},
-		// 	speed, function() {
-		// 	/* stuff to do after animation is complete */
-		// });
-		console.log($this.offset().left);
-	
-	});
-
 	$('.section').each(function(index, el) {
 		var $this = $(this);
 		var specialBlock = `
@@ -68,6 +61,6 @@ $(function(){
 		}
 	});
 
-
+	$( ".select" ).selectmenu();
 	
 });

@@ -676,6 +676,44 @@ body
 		margin-bottom: 0
 	.link
 		font-weight: normal
+.section-form
+	display: flex
+	flex-flow: wrap row
+	justify-content: space-between
+	.control-label
+		margin-bottom: 60px
+		&:nth-last-child(-n+2)
+			margin-bottom: 0
+	label 
+		width: 110px
+		display: inline-block
+		font-weight: bold
+
+	.ui-selectmenu-button, input
+		position: relative
+		outline: none
+		border-width: 3px
+		border-style: solid
+		border-radius: 50px
+		line-height: 54px
+		width: 350px
+		top: -10px
+		padding: 0 45px
+		&:after
+			position: absolute
+			content: '\f107'
+			font-family: FontAwesome
+			line-height: 1
+			top: calc(50% - 8px)
+			right: 30px
+	.ui-selectmenu-text
+		font-size: 18px
+	
+.form-orange
+	.ui-selectmenu-button, input
+		border-color: #ff8400
+.ui-menu
+	background-color: #fff
 
 .main-footer
 	padding: 40px 0
@@ -700,5 +738,7 @@ body
 	font-size: 14px
 	color: #969696
 	margin-top: 30px
+
+
 
 @import "media" // Всегда в конце	.Rectangle_76_copy_копия_21

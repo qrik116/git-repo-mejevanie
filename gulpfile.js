@@ -33,6 +33,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/jquery-1.11.0.min.js',
+		'app/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js',
 		'app/libs/jquery.maskedinput/jquery.maskedinput.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
