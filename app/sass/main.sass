@@ -49,15 +49,14 @@ h3
 a
 	color: inherit
 
-.p-r15
-	padding-right: 15px
-.p-l15
-	padding-left: 15px
+aside
+	display: block
 
 .btn, input
 	border: none
 	outline: none
 	background: none
+	color: #000
 .btn-def
 	box-shadow: 0px 1px 7px 0px rgba(0, 0, 1, 0.21)
 	font-size: 20px
@@ -167,11 +166,19 @@ body
 	margin-top: 75px
 .p-60
 	padding: 60px 0
+.p-r15
+	padding-right: 15px
+.p-l15
+	padding-left: 15px
+
 .bg-grey
 	background-color: #f0f0f0
 	color: #000
 .bg-orange
 	background-color: #ff8400
+	color: #fff
+.bg-green
+	background-color: #37c406
 	color: #fff
 .bg-woman
 	background-image: url(../img/woman.png)
@@ -200,7 +207,7 @@ body
 	text-transform: uppercase
 	b
 		font-weight: 800
-.main_banner-nav
+.main_banner-nav, .section-aside
 	position: absolute
 	bottom: 40px
 	left: 0
@@ -213,7 +220,6 @@ body
 			width: calc(100% - 30px)
 			font-weight: 600
 			font-size: 14px
-			box-shadow: 0px 2px 4px 0px rgba(0, 0, 1, 0.21)
 			&:before
 				content: ''
 				height: 35px
@@ -221,26 +227,55 @@ body
 				-webkit-transform: rotate(45deg)
 				-ms-transform: rotate(45deg)
 				transform: rotate(45deg)
-				background: #b7ed93
 				position: absolute
 				top: 8px
 				right: -17px
-				box-shadow: 2px 0px 4px 0px rgba(0, 0, 1, 0.21)
 				transition: all .25s
 			&:last-child
 				margin-bottom: 0
-			&:hover
-				a
-					background: #7cd740
-				&:before
-					background: #7cd740
 			a
 				line-height: 50px
 				display: block
 				position: relative
-				background: #b7ed93
 				padding-left: 30px
 				transition: all .25s
+.main_banner-nav_green, .section-aside_green
+	ul li
+		&.active
+			&:before
+				background: #7cd740
+			a
+				background: #7cd740
+		&:before
+			background: #b7ed93
+		&:hover
+			a
+				background: #7cd740
+			&:before
+				background: #7cd740
+		a
+			background: #b7ed93
+.main_banner-nav_grey, .section-aside_grey
+	ul li
+		&.active
+			&:before
+				background: #ff992b
+			a
+				background: #ff992b
+		&:before
+			background: #f0f0f0
+		&:hover
+			a
+				background: #ff992b
+			&:before
+				background: #ff992b
+		a
+			background: #f0f0f0
+.main_banner-nav_shadow, .section-aside_shadow
+	ul li
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 1, 0.21)
+		&:before
+			box-shadow: 2px 0px 4px 0px rgba(0, 0, 1, 0.21)
 .main_banner-title_wrap
 	display: inline-block
 	width: 730px
@@ -280,6 +315,14 @@ body
 	color: #2ba003
 .link-orange
 	color: #ff8400
+.link.btn
+	display: block
+	width: calc(100% - 30px)
+	text-decoration: none
+	text-align: center
+	line-height: 40px
+	font-weight: 600
+	font-size: 18px
 
 .contact-form
 	text-align: center
@@ -402,6 +445,8 @@ body
 		border-bottom: 8px solid
 .special-shadow
 	box-shadow: -8px 8px 10px 0px rgba(0, 0, 1, 0.21)
+.section-header
+
 .mark-like
 	&:before
 		content: url(../img/like.svg)
@@ -451,14 +496,49 @@ body
 		li
 			&:after, &:before
 				background: #37c406
+.section-header
+	margin-bottom: 50px
+	text-transform: uppercase
 .section-footer
 	text-align: center
+	margin-top: 50px
 	p
 		font-size: 20px
 		font-weight: bold
 		text-transform: uppercase
+		margin-bottom: 20px
 	.link
 		text-decoration: none
+.section-aside
+	position: static
+	ul
+		width: 100%
+		li
+			font-weight: bold
+			font-size: 16px
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 5px
+			&.active:before, &:hover:before
+				content: ''
+				opacity: 1
+			&:before
+				opacity: 0
+				height: 42px
+				width: 42px
+				right: -22px
+				top: 9px
+				transition: all .2s
+			a
+				position: relative
+				display: block
+				line-height: 60px
+				padding: 0 30px
+				span
+					font-weight: normal
+					font-size: 14px
+					position: absolute
+					right: 30px
 
 .main-footer
 	padding: 40px 0

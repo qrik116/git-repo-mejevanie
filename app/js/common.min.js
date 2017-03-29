@@ -1,6 +1,8 @@
 ;"use sctict";
 $(function(){
 
+	$(".phone").mask("+7 (999) 999-99-99");
+
 	$('.section .btn').on('click', function(event) {
 		event.preventDefault();
 		var $this = $(this);
@@ -8,6 +10,16 @@ $(function(){
 			$('.section .btn').removeClass('active');
 			$this.addClass('active')
 			.closest('.row').next().fadeOut('fast').fadeIn('fast');
+		}
+	});
+
+	$('.section .section-nav li a').on('click', function(event) {
+		event.preventDefault();
+		var $this = $(this).parent();
+		if (!$this.hasClass('active')){
+			$('.section .section-nav li').removeClass('active');
+			$this.addClass('active')
+			.closest('.row').find('.section-cart-wrap').fadeOut('fast').fadeIn('fast');
 		}
 	});
 
