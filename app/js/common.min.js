@@ -1,6 +1,24 @@
 ;"use sctict";
 $(function(){
 
+	var $sectionWith_opa = $('.section-with_opa');
+	if ($sectionWith_opa){
+		var startOpasity = 0.35, 
+				persOpa = +((1 - startOpasity)/$sectionWith_opa.length).toFixed(3),
+				curOpacity = 0;
+		$sectionWith_opa.each(function(index, el) {
+			var $this = $(this);
+			curOpacity += index == 0 ? startOpasity : persOpa;
+			if (index == $sectionWith_opa.length - 1)
+				curOpacity = 1;
+			$this.children('p').css('opacity', curOpacity);
+		});
+	}
+
+	var tabs = `.section .section-nav li a, 
+	.section .section-aside li a, 
+	.section .section-pagination li a`;
+
 	$(".phone").mask("+7 (999) 999-99-99");
 
 	$('.section .btn').on('click', function(event) {
@@ -13,7 +31,7 @@ $(function(){
 		}
 	});
 
-	$('.section .section-nav li a, .section .section-aside li a').on('click', function(event) {
+	$(tabs).on('click', function(event) {
 		event.preventDefault();
 		var $this = $(this).parent();
 		if (!$this.hasClass('active')){
@@ -21,6 +39,19 @@ $(function(){
 			$this.addClass('active')
 			.closest('.row').find('.section-cart-wrap').fadeOut('fast').fadeIn('fast');
 		}
+	});
+
+	$('.section .section-pagination li a').on('click', function(event) {
+		event.preventDefault();
+		var $this = $(this).parent();
+		// $this.animate({
+		// 	'transform': 'translate('+  +')',
+		// 	param2: value2},
+		// 	speed, function() {
+		// 	/* stuff to do after animation is complete */
+		// });
+		console.log($this.offset().left);
+	
 	});
 
 	$('.section').each(function(index, el) {
@@ -37,19 +68,6 @@ $(function(){
 		}
 	});
 
-	var $sectionWith_opa = $('.section-with_opa');
-	if ($sectionWith_opa){
-		var startOpasity = 0.35, 
-				persOpa = +((1 - startOpasity)/$sectionWith_opa.length).toFixed(3),
-				curOpacity = 0;
-		$sectionWith_opa.each(function(index, el) {
-			var $this = $(this);
-			curOpacity += index == 0 ? startOpasity : persOpa;
-			if (index == $sectionWith_opa.length - 1)
-				curOpacity = 1;
-			$this.children('p').css('opacity', curOpacity);
-		});
-	}
+
 	
-		
 });

@@ -166,8 +166,6 @@ body
 	margin-top: 75px
 .m-t50
 	margin-top: 50px
-.p-60
-	padding: 60px 0
 .p-r15
 	padding-right: 15px
 .p-l15
@@ -185,11 +183,20 @@ body
 	&.contact-form-white
 		.btn
 			box-shadow: 0px 4px 0px 0px #278905
+.bg-white
+	background-color: #fff
+	color: #000
 .bg-woman
 	background-image: url(../img/woman.png)
 	background-position-x: right
 	background-position-y: bottom
 	background-repeat: no-repeat
+.bg-man
+	background-image: url(../img/man.svg)
+	background-position-x: calc(100% - 50px)
+	background-position-y: bottom
+	background-repeat: no-repeat
+	background-size: 20%
 .isSpecial-grey .section-special
 	background-color: #f0f0f0
 	color: #000
@@ -403,6 +410,7 @@ body
 
 .section
 	position: relative
+	padding: 60px 0
 .section.isSpecial
 	padding-top: 125px
 .section-title
@@ -491,7 +499,6 @@ body
 	p
 		&:after, &:before
 			background: #ff8400
-
 .section-with_opa
 	width: 260px
 	position: relative
@@ -503,6 +510,41 @@ body
 		bottom: 0
 	&:nth-last-child(-n+3)
 		margin-bottom: 0
+.section-pagination
+	font-size: 40px
+	ul
+		display: flex
+		justify-content: space-around
+	li
+		display: inline-block
+		transition: all .25s
+	.active
+		font-size: 70px
+		line-height: 1
+		font-weight: bold
+		position: relative
+		z-index: 2
+		transform: translate(0, 30px)
+		&:after
+			content: "\f105"
+			font-family: FontAwesome
+			font-size: 50px
+			position: absolute
+			bottom: 7px
+			margin-left: 10px
+.pagination-text
+	padding: 55px 95px
+	border-radius: 5px
+	h3
+		margin-bottom: 25px
+.pagination-green
+	li
+		color: #b4e09a
+		&:hover
+			color: #75cf2d
+	.active
+		color: #75cf2d
+
 
 .mark-like
 	&:before

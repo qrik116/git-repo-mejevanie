@@ -4176,9 +4176,6 @@ body {
 .m-t50 {
   margin-top: 50px; }
 
-.p-60 {
-  padding: 60px 0; }
-
 .p-r15 {
   padding-right: 15px; }
 
@@ -4200,11 +4197,23 @@ body {
     -webkit-box-shadow: 0px 4px 0px 0px #278905;
             box-shadow: 0px 4px 0px 0px #278905; }
 
+.bg-white {
+  background-color: #fff;
+  color: #000; }
+
 .bg-woman {
   background-image: url(../img/woman.png);
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat; }
+
+.bg-man {
+  background-image: url(../img/man.svg);
+  background-position-x: -webkit-calc(100% - 50px);
+  background-position-x: calc(100% - 50px);
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 20%; }
 
 .isSpecial-grey .section-special {
   background-color: #f0f0f0;
@@ -4455,7 +4464,8 @@ body {
     top: calc(50% - 15px); }
 
 .section {
-  position: relative; }
+  position: relative;
+  padding: 60px 0; }
 
 .section.isSpecial {
   padding-top: 125px; }
@@ -4587,6 +4597,52 @@ body {
     bottom: 0; }
   .section-with_opa:nth-last-child(-n+3) {
     margin-bottom: 0; }
+
+.section-pagination {
+  font-size: 40px; }
+  .section-pagination ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .section-pagination li {
+    display: inline-block;
+    -webkit-transition: all .25s;
+    transition: all .25s; }
+  .section-pagination .active {
+    font-size: 70px;
+    line-height: 1;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    -webkit-transform: translate(0, 30px);
+        -ms-transform: translate(0, 30px);
+            transform: translate(0, 30px); }
+    .section-pagination .active:after {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-size: 50px;
+      position: absolute;
+      bottom: 7px;
+      margin-left: 10px; }
+
+.pagination-text {
+  padding: 55px 95px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+  .pagination-text h3 {
+    margin-bottom: 25px; }
+
+.pagination-green li {
+  color: #b4e09a; }
+  .pagination-green li:hover {
+    color: #75cf2d; }
+
+.pagination-green .active {
+  color: #75cf2d; }
 
 .mark-like:before {
   content: url(../img/like.svg); }
