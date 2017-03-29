@@ -4192,13 +4192,19 @@ body {
   background-position-y: bottom;
   background-repeat: no-repeat; }
 
-.section-special.bg-grey:before {
-  border-bottom-color: #a0a0a0;
-  border-right-color: #a0a0a0; }
+.isSpecial-grey .section-special {
+  background-color: #f0f0f0;
+  color: #000; }
+  .isSpecial-grey .section-special:before {
+    border-bottom-color: #a0a0a0;
+    border-right-color: #a0a0a0; }
 
-.section-special.bg-orange:before {
-  border-bottom-color: #c36500;
-  border-right-color: #c36500; }
+.isSpecial-orange .section-special {
+  background-color: #ff8400;
+  color: #fff; }
+  .isSpecial-orange .section-special:before {
+    border-bottom-color: #c36500;
+    border-right-color: #c36500; }
 
 .main_banner {
   position: relative;
@@ -4394,7 +4400,7 @@ body {
 .section {
   position: relative; }
 
-.section[data-special="true"] {
+.section.isSpecial {
   padding-top: 125px; }
 
 .section-title {

@@ -20,13 +20,13 @@ var gulp           = require('gulp'),
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
-		])
-	//.pipe(concat('common.min.js'))
-	.pipe(minify({
-		ext:{
-			min:'.min.js'
-		},
-	}))
+	])
+	.pipe(concat('common.min.js'))
+	// .pipe(minify({
+	// 	ext:{
+	// 		min:'.min.js'
+	// 	},
+	// }))
 	.pipe(gulp.dest('app/js'));
 });
 
@@ -53,14 +53,16 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('./app/sass/**/*.+(sass|scss)')
-	.pipe(sourcemap.init())
-	.pipe(sass().on("error", notify.onError()))
-	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(sourcemap.write('./'))
-	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.stream({match: '**/*.css'}));
+	return setTimeout(function(){
+		gulp.src('./app/sass/**/*.+(sass|scss)')
+		.pipe(sourcemap.init())
+		.pipe(sass().on("error", notify.onError()))
+		.pipe(rename({suffix: '.min', prefix : ''}))
+		.pipe(autoprefixer(['last 15 versions']))
+		.pipe(sourcemap.write('./'))
+		.pipe(gulp.dest('app/css'))
+		.pipe(browserSync.stream({match: '**/*.css'}));
+	}, 50);
 });
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
