@@ -4531,6 +4531,13 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .section_wrap li {
+    width: 49%;
+    margin-bottom: 50px; }
+    .section_wrap li:nth-last-child(-n+2) {
+      margin-bottom: 0; }
+  .section_wrap h3 {
+    margin-bottom: 30px; }
 
 .section_block {
   width: 467px;
@@ -4586,6 +4593,39 @@ body {
 
 .mark-clock:before {
   content: url(../img/clock.svg); }
+
+.mark-increase:before {
+  content: '';
+  background: no-repeat url(../img/increase.png) center; }
+
+.mark-engineer:before {
+  content: '';
+  background: no-repeat url(../img/engineer.png) center; }
+
+.mark-hand:before {
+  content: '';
+  background: no-repeat url(../img/hand.png) center; }
+
+.mark-map:before {
+  content: '';
+  background: no-repeat url(../img/map.png) center; }
+
+.mark-puzl:before {
+  content: '';
+  background: no-repeat url(../img/puzl.png) center; }
+
+.mark-wall:before {
+  content: '';
+  background: no-repeat url(../img/wall.png) center; }
+
+.mark-60 .mark:before {
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.mark-orange .mark:before {
+  background-color: #ff8400; }
 
 .section-cart {
   -webkit-border-radius: 5px;

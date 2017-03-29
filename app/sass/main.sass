@@ -454,6 +454,13 @@ body
 	display: flex
 	flex-flow: wrap row
 	justify-content: space-between
+	li
+		width: 49%
+		margin-bottom: 50px
+		&:nth-last-child(-n+2)
+			margin-bottom: 0
+	h3
+		margin-bottom: 30px
 .section_block
 	width: 467px
 	border-radius: 5px
@@ -503,6 +510,38 @@ body
 .mark-clock
 	&:before
 		content: url(../img/clock.svg)
+.mark-increase
+	&:before
+		content: ''
+		background: no-repeat url(../img/increase.png) center
+.mark-engineer
+	&:before
+		content: ''
+		background: no-repeat url(../img/engineer.png) center
+.mark-hand
+	&:before
+		content: ''
+		background: no-repeat url(../img/hand.png) center
+.mark-map
+	&:before
+		content: ''
+		background: no-repeat url(../img/map.png) center
+.mark-puzl
+	&:before
+		content: ''
+		background: no-repeat url(../img/puzl.png) center
+.mark-wall
+	&:before
+		content: ''
+		background: no-repeat url(../img/wall.png) center
+.mark-60
+	.mark:before
+		width: 60px
+		height: 60px
+		border-radius: 50%
+.mark-orange
+	.mark:before
+		background-color: #ff8400
 
 .section-cart
 	border-radius: 5px
