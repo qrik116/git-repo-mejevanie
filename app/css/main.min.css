@@ -4193,6 +4193,9 @@ body {
 .bg-green {
   background-color: #37c406;
   color: #fff; }
+  .bg-green.contact-form-white .btn {
+    -webkit-box-shadow: 0px 4px 0px 0px #278905;
+            box-shadow: 0px 4px 0px 0px #278905; }
 
 .bg-woman {
   background-image: url(../img/woman.png);
@@ -4613,6 +4616,13 @@ body {
           font-size: 14px;
           position: absolute;
           right: 30px; }
+
+.section_descr {
+  margin-bottom: 40px; }
+  .section_descr:last-child {
+    margin-bottom: 0; }
+  .section_descr .link {
+    font-weight: normal; }
 
 .main-footer {
   padding: 40px 0;
