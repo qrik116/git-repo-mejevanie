@@ -73,4 +73,45 @@ $(function(){
 
 	$( ".select" ).selectmenu();
 	
+
+	$('.link-slide').on('click', function(event) {
+		event.preventDefault();
+		var $this = $(this),
+				windowWidth = $(window).width();
+		var indexBlock = $this.parent().hasClass('section_block') ? ($this.parent().parent().index() + 1) : undefined,
+				lengthBlock = $this.closest('.section_wrap').children('div').length;
+
+		if (!$this.attr('data-toggle'))
+			$this.attr('data-toggle', 'false');
+
+		if ($this.attr('data-toggle') == 'true'){
+			$this.attr('data-toggle', 'false').text('подробнее').next().slideUp(400);
+			if ($this.parent().hasClass('section_block')){
+				$this.parent().attr('data-toggle', 'false')
+				.animate({'margin-bottom': 10}, 400).next().css('transform', 'translate(0, -'+$this.parent().next().innerHeight()+'px)').slideUp(400);
+			}
+		}	else {
+			if ($this.parent().hasClass('section_block')){
+				if ($this.attr('data-toggle') == 'false'){
+					$this.closest('.section_wrap').find('.link-descr').css('transform', 'translate(0, 0)').slideUp(400)
+						.prev().animate({'margin-bottom': 10}, 400).attr('data-toggle', 'false').find('.link').text('подробнее').attr('data-toggle', 'false');
+				}
+
+				$this.parent().animate({'margin-bottom': $this.parent().next().css('transform', 'translate(0, -'+($this.parent().next().innerHeight()+25)+'px)').innerHeight()}, 400, function(){
+					$(this).next().slideDown(200);
+				})
+				.attr('data-toggle', 'true');
+			}
+			$this.attr('data-toggle', 'true').text('свернуть').next().slideDown(400);
+			
+		}
+
+
+		// $this.toggle(function() {
+		// 	$this.text('Cвернуть').next().slideDown(400);
+		// }, function() {
+		// 	$this.text('Подробнее').next().slideUp(400);
+		// });
+	});
+	
 });
