@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 3.12 3.12" style="enable-background:new 0 0 3.12 3.12;" xml:space="preserve">
 <style type="text/css">
 	.st0{enable-background:new    ;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FF0000;}
+	.st1{fill:#FF0000;}
 </style>
-<g id="Background_xA0_Image_1_">
-	
-		<image style="overflow:visible;" width="13" height="13" id="Background_xA0_Image" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEBLAEsAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
-EAMCAwYAAAFrAAABdgAAAZf/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
-Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
-JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIABEAEQMBIgACEQEDEQH/
-xABeAAEBAAAAAAAAAAAAAAAAAAAABwEBAAAAAAAAAAAAAAAAAAAAABABAQAAAAAAAAAAAAAAAAAA
-IDARAQAAAAAAAAAAAAAAAAAAADASAQAAAAAAAAAAAAAAAAAAACD/2gAMAwEAAhEDEQAAAKAAAAD/
-2gAIAQIAAQUAH//aAAgBAwABBQAf/9oACAEBAAEFAI//2gAIAQICBj8AH//aAAgBAwIGPwAf/9oA
-CAEBAQY/AB//2Q==" transform="matrix(0.24 0 0 0.24 0 0)">
-	</image>
-</g>
 <g id="Forma_1_1_" class="st0">
 	<g id="Forma_1">
 		<g>
-			<path class="st1" d="M2.085,1.559l0.923-0.923c0.146-0.146,0.146-0.382,0-0.528c-0.146-0.146-0.383-0.146-0.529,0L1.557,1.03
-				L0.633,0.107c-0.146-0.146-0.383-0.146-0.529,0c-0.146,0.146-0.146,0.383,0,0.528l0.923,0.923L0.105,2.482
-				c-0.146,0.146-0.146,0.383,0,0.528c0.073,0.073,0.169,0.11,0.264,0.11c0.096,0,0.191-0.037,0.264-0.11l0.923-0.923L2.48,3.01
-				c0.073,0.073,0.169,0.11,0.264,0.11s0.191-0.037,0.264-0.11c0.146-0.146,0.146-0.383,0-0.528L2.085,1.559z"/>
+			<path class="st1" d="M2.085,1.559l0.923-0.923c0.146-0.146,0.146-0.382,0-0.528s-0.383-0.146-0.529,0L1.557,1.03L0.633,0.107
+				c-0.146-0.146-0.383-0.146-0.529,0s-0.146,0.383,0,0.528l0.923,0.923L0.105,2.482c-0.146,0.146-0.146,0.383,0,0.528
+				c0.073,0.073,0.169,0.11,0.264,0.11c0.096,0,0.191-0.037,0.264-0.11l0.923-0.923L2.48,3.01c0.073,0.073,0.169,0.11,0.264,0.11
+				s0.191-0.037,0.264-0.11c0.146-0.146,0.146-0.383,0-0.528L2.085,1.559z"/>
 		</g>
 	</g>
 </g>

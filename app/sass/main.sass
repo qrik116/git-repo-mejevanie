@@ -77,6 +77,10 @@ aside
 		position: relative
 		margin-right: 10px
 		top: 2px
+.correct-bg
+	.section-cart-wrap
+		margin-bottom: -60px
+		padding-bottom: 60px
 
 $height-line: 2px
 $size: 50px
@@ -187,16 +191,31 @@ body
 	background-color: #fff
 	color: #000
 .bg-woman
-	background-image: url(../img/woman.png)
+	background-image: url(../img/woman-1024.png)
+	background-position-x: right
+	background-position-y: bottom
+	background-repeat: no-repeat
+.bg-woman_gad
+	background-image: url(../img/woman-gad-1024.png)
 	background-position-x: right
 	background-position-y: bottom
 	background-repeat: no-repeat
 .bg-man
 	background-image: url(../img/man.svg)
-	background-position-x: calc(100% - 50px)
-	background-position-y: bottom
-	background-repeat: no-repeat
-	background-size: 20%
+.bg-doc_pen
+	background-image: url(../img/doc-pen.svg)
+.bg-man_camera
+	background-image: url(../img/man-camera.svg)
+.bg-flag
+	background-image: url(../img/flag.svg)
+.bg-engineer
+	background-image: url(../img/engineer.svg)
+.bg-ur_help
+	background-image: url(../img/ur-help.svg)
+.bg-doc
+	background-image: url(../img/doc.svg)
+.bg-doc_prize
+	background-image: url(../img/doc-prize.svg)
 .isSpecial-grey .section-special
 	background-color: #f0f0f0
 	color: #000
@@ -290,7 +309,6 @@ body
 			box-shadow: 2px 0px 4px 0px rgba(0, 0, 1, 0.21)
 .main_banner-title_wrap
 	display: inline-block
-	width: 730px
 	text-align: right
 .main_banner-title
 	display: inline-block
@@ -518,6 +536,8 @@ body
 	li
 		display: inline-block
 		transition: all .25s
+		&:first-child:before, &:last-child:after
+			content: none
 	.active
 		font-size: 70px
 		line-height: 1
@@ -525,18 +545,31 @@ body
 		position: relative
 		z-index: 2
 		transform: translate(0, 30px)
-		&:after
-			content: "\f105"
+		&:after, &:before
 			font-family: FontAwesome
 			font-size: 50px
 			position: absolute
 			bottom: 7px
+			font-weight: normal
+		&:after
+			content: "\f105"
 			margin-left: 10px
+		&:before
+			content: "\f104"
+			left: -25px
+
 .pagination-text
-	padding: 55px 95px
-	border-radius: 5px
-	h3
-		margin-bottom: 25px
+	.section-cart-wrap
+		padding: 55px 95px
+		border-radius: 5px
+		background-position-x: calc(100% - 50px)
+		background-position-y: bottom
+		background-repeat: no-repeat
+		background-size: 20%
+		h3
+			margin-bottom: 25px
+	.bg-doc, .bg-doc_prize
+		background-size: 15%
 .pagination-green
 	li
 		color: #b4e09a
@@ -588,6 +621,10 @@ body
 .section-cart
 	border-radius: 5px
 	min-height: 490px
+.section-cart-wrap
+	display: none
+.section-cart-wrap.active
+	display: block
 .section-cart_header
 	font-size: 20px
 	font-weight: bold
