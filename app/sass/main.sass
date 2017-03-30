@@ -81,6 +81,11 @@ aside
 	.section-cart-wrap
 		margin-bottom: -60px
 		padding-bottom: 60px
+.phone
+	&:before
+		content: "\f095"
+		font-family: FontAwesome
+		margin-right: 30px
 
 $height-line: 2px
 $size: 50px
@@ -793,10 +798,32 @@ body
 		font-size: 18px
 	
 .form-orange
-	.ui-selectmenu-button, input
+	.ui-selectmenu-button, input, .ui-menu
 		border-color: #ff8400
 .ui-menu
 	background-color: #fff
+	border-width: 3px
+	border-style: solid
+	border-color: #ff8400
+	border-top: none
+	&:after, &:before
+		position: absolute
+		content: ''
+		width: 3px
+		height: 40px
+		display: block
+		background-color: #ff8400
+		top: -30px
+	&:after
+		right: 0
+	&:before
+		left: 0
+.ui-menu-item
+	border-bottom: 1px solid  #ff8400
+	&:last-child
+		border: none
+.ui-menu-item .ui-state-active
+	font-weight: 600
 
 .main-footer
 	padding: 40px 0

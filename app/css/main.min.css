@@ -3825,6 +3825,11 @@ aside {
   margin-bottom: -60px;
   padding-bottom: 60px; }
 
+.phone:before {
+  content: "\f095";
+  font-family: FontAwesome;
+  margin-right: 30px; }
+
 .menu-btn {
   height: 50px;
   width: 50px;
@@ -4699,11 +4704,35 @@ body {
   .section-form .ui-selectmenu-text {
     font-size: 18px; }
 
-.form-orange .ui-selectmenu-button, .form-orange input {
+.form-orange .ui-selectmenu-button, .form-orange input, .form-orange .ui-menu {
   border-color: #ff8400; }
 
 .ui-menu {
-  background-color: #fff; }
+  background-color: #fff;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ff8400;
+  border-top: none; }
+  .ui-menu:after, .ui-menu:before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 40px;
+    display: block;
+    background-color: #ff8400;
+    top: -30px; }
+  .ui-menu:after {
+    right: 0; }
+  .ui-menu:before {
+    left: 0; }
+
+.ui-menu-item {
+  border-bottom: 1px solid  #ff8400; }
+  .ui-menu-item:last-child {
+    border: none; }
+
+.ui-menu-item .ui-state-active {
+  font-weight: 600; }
 
 .main-footer {
   padding: 40px 0;
