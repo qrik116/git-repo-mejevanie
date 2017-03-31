@@ -4590,6 +4590,9 @@ body {
     .section-pagination .active:before {
       content: "\f104";
       left: -25px; }
+  .section-pagination .prev, .section-pagination .next {
+    display: inline-block;
+    color: #000; }
 
 .section_table {
   text-align: left;
@@ -4670,9 +4673,15 @@ body {
   color: #b4e09a; }
   .pagination-green li:hover {
     color: #75cf2d; }
+  .pagination-green li:focus {
+    color: #b4e09a; }
 
 .pagination-green .active {
   color: #75cf2d; }
+
+.pagination-green .prev, .pagination-green .next {
+  color: #b4e09a;
+  display: none; }
 
 .mark-like:before {
   content: url(../img/like.svg); }
@@ -5066,13 +5075,51 @@ body {
     top: 0;
     width: 100%; }
   .section-form .control-label {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    width: 100%; }
     .section-form .control-label:nth-last-child(-n+2) {
       margin-bottom: 30px; }
     .section-form .control-label:last-child {
       margin-bottom: 0; }
   .sectin_map {
     display: none; }
+  .section-pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .section-pagination ul {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+    .section-pagination li {
+      position: absolute; }
+    .section-pagination .active {
+      font-size: 40px;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+      line-height: 1.6;
+      position: static; }
+      .section-pagination .active:after, .section-pagination .active:before {
+        content: none; }
+    .section-pagination .prev, .section-pagination .next {
+      display: inline-block;
+      cursor: pointer; }
+  .pagination-text {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .pagination-text .section-cart-wrap {
+      padding: 0;
+      background: transparent; }
+      .pagination-text .section-cart-wrap h3 {
+        margin-bottom: 10px; }
   .main-footer_top .flex-center {
     -webkit-box-pack: center;
     -webkit-justify-content: center;

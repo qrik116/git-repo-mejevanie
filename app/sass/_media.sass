@@ -182,12 +182,39 @@
 			width: 100%
 		.control-label
 			margin-bottom: 30px
+			width: 100%
 			&:nth-last-child(-n+2)
 				margin-bottom: 30px
 			&:last-child
 				margin-bottom: 0
 	.sectin_map
 		display: none
+	.section-pagination
+		display: flex
+		justify-content: space-between
+		ul
+			display: inline-flex
+		li
+			position: absolute
+		.active
+			font-size: 40px
+			transform: none
+			line-height: 1.6
+			position: static
+			&:after, &:before
+				content: none
+		.prev, .next
+			display: inline-block
+			cursor: pointer
+
+	.pagination-text
+		background-color: transparent
+		box-shadow: none
+		.section-cart-wrap
+			padding: 0
+			background: transparent
+			h3
+				margin-bottom: 10px
 
 	.main-footer_top
 		.flex-center

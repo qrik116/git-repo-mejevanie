@@ -694,6 +694,9 @@ body
 		&:before
 			content: "\f104"
 			left: -25px
+	.prev, .next
+		display: inline-block
+		color: #000
 .section_table
 	text-align: left
 	position: relative
@@ -768,8 +771,13 @@ body
 		color: #b4e09a
 		&:hover
 			color: #75cf2d
+		&:focus
+			color: #b4e09a
 	.active
 		color: #75cf2d
+	.prev, .next
+		color: #b4e09a
+		display: none
 
 
 .mark-like
