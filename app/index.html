@@ -36,12 +36,12 @@
 		<section class="main_banner">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-2">
+					<div class="col-xs-12 col-sm-12 col-sm-offset-0 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-0">
 						<header class="main_banner-header">
 							<h1><b>СКОРО 2018!</b> Подумайте о будущем: готовы ли вы лишиться земли и стать нарушителем в один день?</h1>
 						</header>
 					</div>
-					<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+					<div class="col-sm-9 col-sm-offset-3 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-0">
 						<div class="main_banner-title_wrap">
 							<div class="main_banner-title">
 								<p>Без межевания будет <b>невозможно совершать любые сделки</b> с землёй</p>
@@ -61,7 +61,7 @@
 						</div>
 						
 					</div>
-					<div class="main_banner-nav main_banner-nav_green main_banner-nav_shadow">
+					<div class="main_banner-nav main_banner-nav_green main_banner-nav_shadow hidden-xs">
 						<ul>
 							<li class="active"><a href="#">Межевание до 2018</a></li>
 							<li><a href="#">Только сегодня</a></li>
@@ -78,22 +78,30 @@
 
 		<section class="contact-form contact-form-shadow contact-form-orange">
 			<div class="container">
-				<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
-				<form class="contact-form_form" action="#">
-					<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
-					<button class="btn" type="submit">Решайтесь!</button>
-				</form>
+				<div class="row flex-center">
+					<div class="col-sm-12 col-md-5">
+						<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
+					</div>
+					<div class="col-sm-12 col-md-7">
+						<form class="contact-form_form" action="#">
+							<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+							<button class="btn" type="submit">Решайтесь!</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="contact-form bg-grey contact-form_search">
+		<section class="contact-form bg-grey contact-form_search contact-form-green">
 			<div class="container">
 				<h3 class="contact-form_header"><span>Ищите конкретную услугу?</span> начните вводить её название в строке поиска</h3>
 				<form class="contact-form_form" action="#">
 					<div>
 						<i class="fa fa-search" aria-hidden="true"></i>
 						<input class="field-search" type="text">
+						<button class="btn" type="sumbit">найти</button>
 					</div>
+					<button class="btn visible-xs" type="sumbit">найти</button>
 				</form>
 				<a class="link link-green" href="#">смотреть все услуги</a>
 			</div>
@@ -104,10 +112,10 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="row">
-							<div class="col-sm-6 p-r15">
+							<div class="col-sm-6 cor-p-r">
 								<a href="#11" class="btn btn-def btn-grey active">для бизнеса</a>
 							</div>
-							<div class="col-sm-6 p-l15">
+							<div class="col-sm-6 cor-p-l">
 								<a href="#12" class="btn btn-def btn-grey">для частных лиц</a>
 							</div>
 						</div>
@@ -117,7 +125,7 @@
 								<div class="col-sm-12">
 									<h2 class="section-title">Делайте бизнес вне земельных и межевых проблем!</h2>
 								</div>
-								<div class="col-sm-7">
+								<div class="col-sm-7 col-md-8">
 									<ul class="section-descr">
 										<li class="mark-like">
 											<p><b>Работаем без замечаний</b> со стороны администрации, геонадзора, геодезической экспертизы, государственного кадастра недвижимости и других надзорных органов.</p>
@@ -135,7 +143,7 @@
 								<div class="col-sm-12">
 									<h2 class="section-title">Делайте бизнес вне земельных и межевых проблем!</h2>
 								</div>
-								<div class="col-sm-7">
+								<div class="col-sm-7 col-sm-8">
 									<ul class="section-descr">
 										<li class="mark-like">
 											<p><b>Работаем без замечаний</b> со стороны администрации, геонадзора, геодезической экспертизы, государственного кадастра недвижимости и других надзорных органов.</p>
@@ -150,16 +158,37 @@
 						
 					</div>
 				</div>
+				<section class="contact-form contact-form-orange bg-transparent visible-md visible-lg">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 col-md-5">
+								<h3 class="contact-form_header">Оставьте свой номер телефона, и наш лучший юрист проконсультирует вас БЕСПЛАТНО!</h3>
+							</div>
+							<div class="col-sm-12 col-md-7">
+								<form class="contact-form_form" action="#">
+									<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+									<button class="btn" type="submit">Решайтесь!</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</section>
 
-		<section class="contact-form contact-form-shadow contact-form-white bg-orange">
+		<section class="contact-form contact-form-shadow contact-form-white bg-orange hidden-md hidden-lg">
 			<div class="container">
-				<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
-				<form class="contact-form_form" action="#">
-					<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
-					<button class="btn" type="submit">Решайтесь!</button>
-				</form>
+				<div class="row flex-center">
+					<div class="col-sm-12 col-md-5">
+						<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
+					</div>
+					<div class="col-sm-12 col-md-7">
+						<form class="contact-form_form" action="#">
+							<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+							<button class="btn" type="submit">Решайтесь!</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -180,7 +209,7 @@
 					
 					<div id="31" class="section-cart-wrap clearfix active">
 
-						<div class="col-sm-6 p-r15">
+						<div class="col-sm-6 cor-p-r">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 50%</p>
@@ -197,7 +226,7 @@
 							</div>
 						</div>
 
-						<div class="col-sm-6 p-l15">
+						<div class="col-sm-6 cor-p-l">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 45%</p>
@@ -218,7 +247,7 @@
 
 					<div id="32" class="section-cart-wrap clearfix">
 
-						<div class="col-sm-6 p-r15">
+						<div class="col-sm-6 cor-p-r">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 50%</p>
@@ -235,7 +264,7 @@
 							</div>
 						</div>
 
-						<div class="col-sm-6 p-l15">
+						<div class="col-sm-6 cor-p-l">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 45%</p>
@@ -256,7 +285,7 @@
 
 					<div id="33" class="section-cart-wrap clearfix">
 
-						<div class="col-sm-6 p-r15">
+						<div class="col-sm-6 cor-p-r">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 50%</p>
@@ -273,7 +302,7 @@
 							</div>
 						</div>
 
-						<div class="col-sm-6 p-l15">
+						<div class="col-sm-6 cor-p-l">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 45%</p>
@@ -294,7 +323,7 @@
 
 					<div id="34" class="section-cart-wrap clearfix">
 
-						<div class="col-sm-6 p-r15">
+						<div class="col-sm-6 cor-p-r">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 50%</p>
@@ -311,7 +340,7 @@
 							</div>
 						</div>
 
-						<div class="col-sm-6 p-l15">
+						<div class="col-sm-6 cor-p-l">
 							<div class="section-cart green shadow">
 								<div class="section-cart_header">
 									<p>скидка 45%</p>
@@ -350,7 +379,7 @@
 
 				<div class="row">
 
-					<div class="col-sm-6 p-r15">
+					<div class="col-sm-6 cor-p-r">
 						<aside class="section-aside section-aside_grey">
 							<ul>
 								<li class="active">
@@ -385,14 +414,13 @@
 						</aside>
 					</div>
 
-					<div class="col-sm-6 p-l15">
+					<div class="col-sm-6 cor-p-l">
 
 						<div id="21" class="section-cart-wrap active">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях <a href="#" class="link link-green link-slide">подробнее</a></p>
 								<div class="link-descr">
 									<p>
 										Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%. Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%.  Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%. Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%.
@@ -400,16 +428,14 @@
 								</div>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 								<div class="link-descr">
 									<p>
 										Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%. Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%.  Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%. Оформить прирезку и увеличить свой участок практически вдвое можно только в том случае, если границы участка установлены. В нашей компании действует уникальное предложение: межевание + прирезка 10%.
@@ -417,250 +443,214 @@
 								</div>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="22" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="23" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
+								
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="24" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="25" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="26" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="27" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Быстрое и законное расширение границ вашей земли!</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Быстрое и законное расширение границ вашей земли!<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="28" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
 						<div id="29" class="section-cart-wrap">
 
-							<div class="section_descr">
-								<h3>Межевание под ключ без увеличения зу <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Межевание под ключ без увеличения зу <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос точек в натуру <span class="link-orange">от 5900</span></h3>
-								<p>Под ключ и на ваших условиях</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос точек в натуру <span>от 5900</span></h3>
+								<p>Под ключ и на ваших условиях<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 
-							<div class="section_descr">
-								<h3>Вынос геодезических знаков <span class="link-orange">от 5900</span></h3>
-								<p>Законное получение максимального размера земли</p>
-								<a href="#" class="link link-green link-slide">подробнее</a>
+							<div class="section_descr mark-check section_descr-orange">
+								<h3>Вынос геодезических знаков <span>от 5900</span></h3>
+								<p>Законное получение максимального размера земли<a href="#" class="link link-green link-slide">подробнее</a></p>
 							</div>
 						</div>
 
@@ -671,11 +661,17 @@
 
 		<section class="contact-form contact-form-shadow contact-form-white bg-green">
 			<div class="container">
-				<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
-				<form class="contact-form_form" action="#">
-					<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
-					<button class="btn" type="submit">Решайтесь!</button>
-				</form>
+				<div class="row flex-center">
+					<div class="col-sm-12 col-md-5">
+						<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
+					</div>
+					<div class="col-sm-12 col-md-7">
+						<form class="contact-form_form" action="#">
+							<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+							<button class="btn" type="submit">Решайтесь!</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -684,7 +680,7 @@
 
 				<h2 class="section-header">специальное предложение по услугам межевания</h2>
 
-				<div class="section_wrap">
+				<div class="section_wrap section-opa_wrap">
 
 					<div class="section-with_opa">
 						<p>Геодезическая съемка</p>
@@ -717,16 +713,91 @@
 					</div>
 
 				</div>
+
+				<div class="section_table table-green">
+					<table>
+						<tr>
+							<th><div class="section_table-col">Геодезическая съемка</div></th>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+						</tr>
+						<tr>
+							<th><div class="section_table-col">Схема расположения ЗУ на кадастровом плане</div></th>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+						</tr>
+						<tr>
+							<th><div class="section_table-col">Межевое дело</div></th>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+						</tr>
+						<tr>
+							<th><div class="section_table-col">Согласование границ</div></th>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+						</tr>
+						<tr>
+							<th><div class="section_table-col">Подача в кадастр</div></th>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col check"></div></td>
+							<td><div class="section_table-col check"></div></td>
+						</tr>
+						<tr>
+							<th><div class="section_table-col">Контроль в кадастре и получение кадастровой выписки</div></th>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col cross"></div></td>
+							<td><div class="section_table-col check"></div></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td><div class="section_table-col">19 999 Р.</div></td>
+							<td><div class="section_table-col">19 999 Р.</div></td>
+							<td><div class="section_table-col">19 999 Р.</div></td>
+							<td><div class="section_table-col">19 999 Р.</div></td>
+							<td><div class="section_table-col">19 999 Р.</div></td>
+							<td><div class="section_table-col">19 999 Р.</div></td>
+						</tr>
+					</table>
+				</div>
+
 			</div>
 		</section>
 
 		<section class="contact-form contact-form-shadow contact-form-white bg-orange">
 			<div class="container">
-				<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
-				<form class="contact-form_form" action="#">
-					<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
-					<button class="btn" type="submit">Решайтесь!</button>
-				</form>
+				<div class="row flex-center">
+					<div class="col-sm-12 col-md-5">
+						<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
+					</div>
+					<div class="col-sm-12 col-md-7">
+						<form class="contact-form_form" action="#">
+							<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+							<button class="btn" type="submit">Решайтесь!</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -869,7 +940,7 @@
 			</div>
 		</section>
 
-		<section class="section">
+		<section class="section sectin_map">
 			<div class="container">
 				
 				<h2 class="section-header m-b40">Электронные услуги в нашем юридическом центре</h2>
@@ -883,11 +954,17 @@
 
 		<section class="contact-form contact-form-shadow contact-form-white bg-orange">
 			<div class="container">
-				<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
-				<form class="contact-form_form" action="#">
-					<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
-					<button class="btn" type="submit">Решайтесь!</button>
-				</form>
+				<div class="row flex-center">
+					<div class="col-sm-12 col-md-5">
+						<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
+					</div>
+					<div class="col-sm-12 col-md-7">
+						<form class="contact-form_form" action="#">
+							<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+							<button class="btn" type="submit">Решайтесь!</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -1038,23 +1115,34 @@
 
 		<section class="contact-form contact-form-shadow contact-form-white bg-orange">
 			<div class="container">
-				<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
-				<form class="contact-form_form" action="#">
-					<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
-					<button class="btn" type="submit">Решайтесь!</button>
-				</form>
+				<div class="row flex-center">
+					<div class="col-sm-12 col-md-5">
+						<h3 class="contact-form_header">Не откладывайте в долгий ящик, оставьте свой номер телефона, мы сделаем все за вас</h3>
+					</div>
+					<div class="col-sm-12 col-md-7">
+						<form class="contact-form_form" action="#">
+							<input class="field-def phone" name="phone" type="text" placeholder="+7 (XXX) XXX-XX-XX">
+							<button class="btn" type="submit">Решайтесь!</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="section">
+		<section class="section sectin_map">
 			<div class="container">
 				
 				<h2 class="section-header m-b40">География объектов «ВЫСШЕЙ ИНСТАНЦИИ»</h2>
 
-				<p><b>Мы успешно проводим межевание с 2008 года по всей территории СПб и ЛО.</b> Убедитесь в этом сами – просто посмотрите географию наших объектов прямо сейчас.</p>
-
-				<div class="link-wrap">
-					<a class="link link-green" href="#">на большую карту</a>
+				<div class="row">
+					<div class="col-sm-12 col-md-8">
+						<p><b>Мы успешно проводим межевание с 2008 года по всей территории СПб и ЛО.</b> Убедитесь в этом сами – просто посмотрите географию наших объектов прямо сейчас.</p>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="link-wrap">
+							<a class="link link-green" href="#">на большую карту</a>
+						</div>
+					</div>
 				</div>
 
 				<img style="margin-top: 20px" width="100%" src="./img/yandex-map.jpg" alt="public map">

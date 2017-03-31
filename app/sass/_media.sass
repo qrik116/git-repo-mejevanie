@@ -14,8 +14,200 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 1023px)
-	/**/
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, 
+	.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, 
+	.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, 
+	.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, 
+	.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, 
+	.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, 
+	.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, 
+	.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, 
+	.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, 
+	.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, 
+	.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, 
+	.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, 
+	.container, .container-fluid
+		padding-left: 15px
+		padding-right: 15px
+	.row
+		margin-left: -15px
+		margin-right: -15px
+
+	h1
+		font-size: 24px
+	h2
+		font-size: 24px
+	h3
+		font-size: 18px
+
+	body
+		font-size: 16px
+		line-height: 1.6
+
+	.btn.active:before
+		position: absolute
+		top: 20px
+		left: calc(50% - 6px)
+		margin: 0
+
+	.main-wrap
+		text-align: center
+
+	.main_banner
+		background: #f8f9e7
+	.main_banner-header
+		margin-bottom: 30px
+	.main_banner-title
+		text-align: center
+		margin-left: 0 !important
+		width: 100% !important
+		margin-bottom: 30px
+		&:before
+			position: static
 	
+	.link-wrap
+		text-align: center
+
+	.contact-form
+		padding: 40px 0
+	.contact-form_form 
+		.field-def, .btn
+			width: 100%
+		.field-def
+			margin-bottom: 20px
+		.field-search
+			padding: 0 30px 0 70px
+	.contact-form_search .contact-form_form
+		margin-bottom: 15px
+		.fa-search
+			left: 30px
+		.btn
+			position: static
+			margin-top: 20px
+	
+	.section
+		padding: 40px 0
+	.section-title 
+		margin: 25px 0 40px
+	.section-descr li
+		padding-left: 0
+		&:before
+			position: static
+			margin: 0 auto
+			margin-bottom: 10px
+	.section-cart-wrap
+		background: none
+	.section-cart
+		min-height: auto
+		margin-bottom: 30px
+	.section-cart_body
+		padding: 30px 25px
+		ul
+			display: none
+		h3
+			margin-bottom: 0
+		br
+			display: none
+	.section-nav li
+		margin-bottom: 10px
+	.section-special
+		left: 15px
+		p
+			font-size: 14px
+			letter-spacing: .6px
+	.section-footer
+		margin-top: 0
+	.section-aside
+		margin: 0 -15px
+		ul
+			margin-bottom: 10px
+			li
+				width: 100%
+				&.active:before, &:hover:before
+					content: none
+				a
+					padding: 0
+					span
+						display: none
+		.link
+			margin: 0 auto
+	.section-cart-wrap
+		display: none !important
+	.section-with_opa
+		width: 100%
+		font-size: 18px
+		margin-bottom: 30px
+		padding: 0
+		&:nth-last-child(-n+3)
+			margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		span
+			position: static
+			font-size: 24px
+	.section_wrap
+		display: block
+		& > div:last-child .section_block
+			margin-bottom: 0
+		li
+			width: 100%
+			margin-bottom: 25px
+			& > p
+				display: none
+			&:nth-last-child(-n+2)
+				margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+	.section_block
+		width: 100%
+		box-shadow: none
+		padding: 0
+		background-color: transparent
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		&:before, &:after
+			content: none
+		.link
+			display: none
+		& > p
+			&:before, &:after
+				left: calc(50% - 5px)
+				top: -20px
+	.section-form 
+		label
+			width: 100%
+			margin-bottom: 10px
+		.ui-selectmenu-button, input
+			top: 0
+			width: 100%
+		.control-label
+			margin-bottom: 30px
+			&:nth-last-child(-n+2)
+				margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+	.sectin_map
+		display: none
+
+	.main-footer_top
+		.flex-center
+			justify-content: center
+			float: none
+	.main-footer_logo
+		margin: 0
+		margin-bottom: 15px
+	.main-footer_name 
+		.name 
+			p
+				font-size: 13px
+			span
+				font-size: 10px
+				vertical-align: baseline
+		& > p
+			font-size: 11.4px
+	.main-footer_social
+		float: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -46,10 +238,243 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 1920px)
-	.main_banner-title_wrap
-		width: 730px
 
+	h1
+		font-size: 39px
+	h2
+		font-size: 29px
+	h3
+		font-size: 20px
+
+	body
+		font-size: 18px
+		line-height: 1.778
+
+	.bg-woman
+		background-image: url(../img/woman-1920.png)
+		background-size: 30%
+		background-position-x: calc(100% - 50px)
+	.bg-woman_gad
+		background-image: url(../img/woman-gad-1920.png)
+		background-size: 40%
+		background-position-x: calc(100% - 50px)
+
+	.correct-bg .section-cart-wrap
+		padding-bottom: 300px
+		margin-bottom: -85px
+
+	.main_banner
+		padding: 70px 0
+		background-image: url(../img/banner-1920.jpg)
+	.main_banner-title
+		margin-bottom: 40px
+		padding-left: 30px
+		&:before
+			left: 0
+		&:nth-child(odd)
+			width: 360px
+		&:nth-child(even)
+			width: 600px
+	.main_banner-title_wrap
+		width: 100%
+	.main_banner-nav, .section-aside
+		bottom: 75px
+		padding-right: 20px
+		li
+			font-size: 15px
+			margin-bottom: 12px
+	.main_banner-nav
+		ul
+			width: 300px
+	.main_banner-header
+		margin-bottom: 25px
+		line-height: 1.4
+
+	.contact-form_header
+		margin-bottom: 0
+		text-align: left
+	.contact-form_search
+		.contact-form_header
+			text-align: center
+			margin-bottom: 30px
+
+	.section
+		padding: 85px 0
+		.contact-form
+			position: absolute
+			padding-bottom: 0
+			bottom: 0
+		& > .container
+			position: relative
+		.link-wrap
+			text-align: right
+	.section-special
+		height: 115px
+		width: 350px
+		p
+			font-size: 15px
+			letter-spacing: 2px
+	.section-title
+		margin: 50px 0 20px
+	.section-descr 
+		li
+			margin-bottom: 30px
+		&.mark-60
+			li
+				padding-left: 100px
+	.section-cart
+		min-height: 
+	.section-opa_wrap
+		display: none
+	.section_table
+		display: block
+	.section-nav
+		margin-top: 30px
+		margin-bottom: 50px
+		li
+			font-size: 22px
+		.active a
+			padding-bottom: 10px
+	.section-cart_body
+		padding: 30px 58px
+		h3
+			font-size: 22px
+		li
+			margin-bottom: 25px
+			&:after, &:before
+				top: 5px
+		br
+			display: none
+	.section-footer
+		margin-bottom: -35px
+	.section-cart-wrap
+		.link
+			float: right
+	.section_wrap
+		> div .section_block
+			width: 420px
+			line-height: 1.5
+			min-height: 150px
+	.section_block
+		width: 48.5%
+		margin-bottom: 40px
+		& > p
+			&:after, &:before
+				top: 5px
+		.link
+			position: absolute
+			bottom: 20px
+	.section-aside ul
+		margin-bottom: 10px
+		li
+			font-size: 22px
+			margin-bottom: 3px
+			a span
+				font-size: 20px
+	.section-pagination
+		font-size: 60px
+		font-weight: bold
+		.active
+			font-size: 90px
+			transform: translate(0, 53px)
+			&:after, &:before
+				font-size: 60px
+				bottom: 25px
+	.section-form 
+		label
+			width: auto
+			min-width: 195px
+			margin-right: 90px
+
+	.contact-form_form
+		.field-search
+			padding-right: 400px
+	.contact-form_search
+		.contact-form_form
+			padding-right: 20px
+			.btn
+				display: block
+
+	.pagination-text 
+		.section-cart-wrap
+			padding: 90px 200px
+		
+	.link-wrap
+		padding-left: 0
+	.link
+		display: inline-block
+
+	.main-footer_nav
+		font-size: 14px
+		justify-content: space-around
+	.main-footer_name 
+		.name span
+			font-size: 13px
+		& > p
+			font-size: 15px
+	.main-footer_social a
+		width: 40px
+	.main-footer_top .main-footer_nav
+		ul
+			justify-content: space-between
+		li
+			padding: 0
+	.main-footer_bottom
+		padding-bottom: 20px
+	.main-footer_header
+		margin-top: 25px
+
+	.cor-p-r
+		padding-right: 20px
+	.cor-p-l
+		padding-left: 20px
+	.m-t75
+		margin-top: 0
+
+	.mark-60
+		.mark:before
+			width: 70px
+			height: 70px
+	.mark-check
+		&:before, &:after
+			content: ''
+			left: -25px
+			top: 5px
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 2543px)
-	/**/
+
+	h1
+		font-size: 44px
+	h2
+		font-size: 34px
+	h3
+		font-size: 24px
+
+	body
+		font-size: 20px
+		line-height: 1.9
+
+	.main_banner
+		padding: 80px
+	.main_banner-title
+		&:nth-child(odd)
+			width: 450px
+		&:nth-child(even)
+			width: 700px
+	.main_banner-nav, .section-aside
+		bottom: 100px
+		padding-right: 100px
+
+	.section-footer 
+		p, .link
+			font-size: 24px
+	.section_table td
+		width: 201px
+	.section_wrap > div .section_block
+		width: 535px
+	.section-form label
+		min-width: 250px
+
+	.contact-form_form
+		text-align: right

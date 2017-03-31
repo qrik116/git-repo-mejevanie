@@ -367,7 +367,7 @@ hr {
 
 @media (min-width:2543px) {
     .container {
-        width: 1170px
+        width: 1760px
     }
 }
 
@@ -1254,7 +1254,7 @@ hr {
     display: none !important
 }
 
-@media (max-width:767px) {
+@media (max-width:1023px) {
     .visible-xs {
         display: block !important
     }
@@ -1270,25 +1270,25 @@ hr {
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:1023px) {
     .visible-xs-block {
         display: block !important
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:1023px) {
     .visible-xs-inline {
         display: inline !important
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:1023px) {
     .visible-xs-inline-block {
         display: inline-block !important
     }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:1024px) and (max-width:1919px) {
     .visible-sm {
         display: block !important
     }
@@ -1304,25 +1304,25 @@ hr {
     }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:1024px) and (max-width:1919px) {
     .visible-sm-block {
         display: block !important
     }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:1024px) and (max-width:1919px) {
     .visible-sm-inline {
         display: inline !important
     }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:1024px) and (max-width:1919px) {
     .visible-sm-inline-block {
         display: inline-block !important
     }
 }
 
-@media (min-width:1024px) and (max-width:1920px) {
+@media (min-width:1920px) and (max-width:2543px) {
     .visible-md {
         display: block !important
     }
@@ -1338,19 +1338,19 @@ hr {
     }
 }
 
-@media (min-width:1024px) and (max-width:1920px) {
+@media (min-width:1920px) and (max-width:2543px) {
     .visible-md-block {
         display: block !important
     }
 }
 
-@media (min-width:1024px) and (max-width:1920px) {
+@media (min-width:1920px) and (max-width:2543px) {
     .visible-md-inline {
         display: inline !important
     }
 }
 
-@media (min-width:1024px) and (max-width:1920px) {
+@media (min-width:1920px) and (max-width:2543px) {
     .visible-md-inline-block {
         display: inline-block !important
     }
@@ -1390,19 +1390,19 @@ hr {
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:1023px) {
     .hidden-xs {
         display: none !important
     }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:1024px) and (max-width:1919px) {
     .hidden-sm {
         display: none !important
     }
 }
 
-@media (min-width:1024px) and (max-width:1920px) {
+@media (min-width:1920px) and (max-width:2543px) {
     .hidden-md {
         display: none !important
     }

@@ -88,74 +88,6 @@ aside
 		font-family: FontAwesome
 		margin-right: 30px
 
-$height-line: 2px
-$size: 50px
-$line-hights: $size*0.3-$height-line
-$time1: 0.25s
-$time2: 0.2s
-$time3: 0.4s
-$color-line: #00679c
-.menu-btn
-	height: $size
-	width: $size
-	background: #000
-	border: none
-	position: relative
-	background: rgba(255, 255, 255, 0.15)
-	border-radius: 50%
-	cursor: pointer
-	z-index: 100
-	transition: all .3s ease
-	display: inline-block
-	> span
-		display: block
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		display: block
-		cursor: pointer
-		transition: opacity $time2 cubic-bezier(0.645, 0.045, 0.355, 1), transform $time3 cubic-bezier(0.4, 0.01, 0.165, 0.99)
-		.top, .middle, .bottom
-			position: absolute
-			height: 100%
-			width: 100%
-			left: 0
-			&:before
-				position: absolute
-				content: ""
-				top: 50%
-				left: 50%
-				width: 60%
-				display: inline-block
-				background: $color-line
-				height: $height-line
-				transform: translateX(-50%) translateY(-50%)
-				transition: opacity $time1 cubic-bezier(0.645, 0.045, 0.355, 1), transform $time3 cubic-bezier(0.4, 0.01, 0.165, 0.99)
-		.top:before
-			top: ($line-hights + $height-line)
-		.bottom:before
-			top: auto
-			bottom: $line-hights
-	&.open > span
-		transform: rotate(90deg)
-		.top
-			transform: rotate(45deg)
-			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
-			&:before
-				transform: translate(-($line-hights + ($height-line - 1)), ($size/2 - ($line-hights + $height-line) - ($height-line - 1)))
-		.middle
-			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
-			transform: rotate(45deg)
-			&:before
-				opacity: 0
-		.bottom
-			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
-			transform: rotate(-45deg)
-			&:before
-				transform: translate(-($line-hights + ($height-line - 1)), -($size/2 - $line-hights - ($height-line - 1)))
-
 .flex-center
 	display: flex
 	align-items: center
@@ -172,6 +104,9 @@ body
 	padding-top: 140px
 	color: $text-color
 
+.bg-transparent
+	background-color: transparent
+	color: #000
 .bg-grey
 	background-color: #f0f0f0
 	color: #000
@@ -228,7 +163,7 @@ body
 
 .main_banner
 	position: relative
-	background: no-repeat url(../img/banner.jpg) bottom / 100%
+	background: no-repeat url(../img/banner-1024.jpg) bottom / 100%
 	padding: 40px 0
 .main_banner-header
 	margin-bottom: 60px
@@ -327,11 +262,11 @@ body
 
 .link-wrap
 	text-align: left
-	padding-left: 45px
 .link
 	display: inline-block
 	text-decoration: underline
 	font-weight: bold
+	display: block
 .link-with_book:before
 	content: url(../img/book.png)
 	margin-right: 20px
@@ -418,6 +353,19 @@ body
 	& + .contact-form_search
 		.contact-form_header span
 			color: #ff8400
+.contact-form-green
+	.field-def
+		border-color: #67d740
+	.btn
+		background: #67d740
+		color: #fff
+		box-shadow: 0px 4px 0px 0px #67d740
+		transition: all .25s
+		&:hover
+			background: #67d740
+	& + .contact-form_search
+		.contact-form_header span
+			color: #67d740
 .contact-form_search
 	.contact-form_form
 		margin-bottom: 30px
@@ -428,6 +376,12 @@ body
 			left: 40px
 			font-size: 30px
 			top: calc(50% - 15px)
+		.btn
+			display: none
+			position: absolute
+			top: 0
+			right: 0
+			box-shadow: none
 
 .section
 	position: relative
@@ -439,6 +393,7 @@ body
 	padding-top: 125px
 .section-title
 	margin: 60px 0 55px
+	text-transform: uppercase
 .section-descr 
 	li
 		margin-bottom: 60px
@@ -456,6 +411,7 @@ body
 		display: flex
 		justify-content: space-between
 		margin-bottom: 35px
+		flex-flow: wrap row
 	li
 		text-transform: uppercase
 		font-weight: bold
@@ -488,7 +444,7 @@ body
 	justify-content: space-between
 	position: relative
 	li
-		width: 49%
+		width: 48%
 		margin-bottom: 50px
 		&:nth-last-child(-n+2)
 			margin-bottom: 0
@@ -575,6 +531,8 @@ body
 .section-cart
 	border-radius: 5px
 	min-height: 490px
+	background-color: #fff
+	overflow: hidden
 .section-cart-wrap
 	display: none
 .section-cart-wrap.active
@@ -663,10 +621,16 @@ body
 					right: 30px
 .section_descr
 	margin-bottom: 40px
+	position: relative
 	&:last-child
 		margin-bottom: 0
 	.link
 		font-weight: normal
+.section_descr-orange
+	&:after, &:before
+		background-color: #ff8400
+	& > h3 span
+		color: #ff8400
 .section-form
 	display: flex
 	flex-flow: wrap row
@@ -729,6 +693,62 @@ body
 		&:before
 			content: "\f104"
 			left: -25px
+.section_table
+	text-align: left
+	position: relative
+	display: none
+	table
+		width: 100%
+		border-spacing: 0 18px
+		border-collapse: separate
+	tr
+		background-color: #f0f0f0
+		line-height: 1.2
+		&:last-child
+			margin-bottom: 0
+			background-color: transparent
+			.section_table-col
+				line-height: 75px
+				padding: 0
+				margin-top: 15px
+				font-size: 24px
+				font-weight: bold
+				border-bottom-left-radius: 5px
+				border-bottom-right-radius: 5px
+				margin-bottom: -9px
+		&:before, &:after
+			content: ''
+			display: inline-block
+		&:before
+			margin-right: 40px
+		&:after
+			margin-left: 40px
+	td
+		text-align: center
+		width: 160px
+		padding: 0 10px
+		height: 100%
+		position: relative
+		z-index: 6
+	.section_table-col
+		padding: 15px 0
+		&.check
+			background: no-repeat url(../img/check.svg) center / 10%
+		&.cross
+			background: no-repeat url(../img/cross.svg) center / 8%
+	.table-col-vis
+		position: absolute
+		height: 100%
+		background: rgba(255, 255, 255, .6)
+		top: -10px
+		z-index: 5
+		box-shadow: 0px 1px 7px 0px rgba(0, 0, 1, 0.21)
+		border-radius: 5px
+
+.table-green
+	tr:last-child .section_table-col
+		background-color: #37c406
+		color: #fff
 
 .pagination-text
 	.section-cart-wrap
@@ -789,6 +809,20 @@ body
 .mark-orange
 	.mark:before
 		background-color: #ff8400
+.mark-check
+	&:after, &:before
+		position: absolute
+		width: 3px
+		left: 10px
+		top: 0
+		-webkit-border-radius: 5px
+		border-radius: 5px
+	&:before
+		height: 15px
+		transform: rotate(40deg) translate(3px, 0px)
+	&:after
+		height: 10px
+		transform: rotate(-50deg) translate(-10px, 1px)
 	
 .form-orange
 	.ui-selectmenu-button, input, .ui-menu
@@ -913,9 +947,9 @@ body
 	margin-bottom: 40px
 .m-t40
 	margin-top: 40px
-.p-r15
+.cor-p-r
 	padding-right: 15px
-.p-l15
+.cor-p-l
 	padding-left: 15px
 
 @import "media" // Всегда в конце	.Rectangle_76_copy_копия_21
