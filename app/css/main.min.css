@@ -3845,7 +3845,11 @@ aside {
   -webkit-box-direction: normal;
   -webkit-flex-flow: wrap row;
       -ms-flex-flow: wrap row;
-          flex-flow: wrap row; }
+          flex-flow: wrap row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 body {
   font-size: 16px;
@@ -4956,7 +4960,8 @@ body {
   .contact-form_form .field-def, .contact-form_form .btn {
     width: 100%; }
   .contact-form_form .field-def {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-right: 0; }
   .contact-form_form .field-search {
     padding: 0 30px 0 70px; }
   .contact-form_search .contact-form_form {
@@ -5004,7 +5009,7 @@ body {
       margin-bottom: 10px; }
       .section-aside ul li {
         width: 100%; }
-        .section-aside ul li.active:before, .section-aside ul li:hover:before {
+        .section-aside ul li.active:before, .section-aside ul li:hover:before, .section-aside ul li:before {
           content: none; }
         .section-aside ul li a {
           padding: 0; }
@@ -5012,8 +5017,6 @@ body {
             display: none; }
     .section-aside .link {
       margin: 0 auto; }
-  .section-cart-wrap {
-    display: none !important; }
   .section-with_opa {
     width: 100%;
     font-size: 18px;
