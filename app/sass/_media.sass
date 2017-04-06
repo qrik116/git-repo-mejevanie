@@ -8,8 +8,26 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 1920px)
-	/**/
+@media only screen and (max-width : 1919px)
+	.main_banner-nav
+		position: fixed
+		top: 10px
+		z-index: 100
+		bottom: auto
+		text-align: left
+		nav
+			position: absolute
+		ul
+			width: 220px
+			li
+				font-size: 12px
+				a
+					line-height: 30px
+				&:before
+					width: 20px
+					height: 20px
+					top: 6px
+					right: -10px
 
 
 /* Small Devices, Tablets */
@@ -73,7 +91,7 @@
 
 	.contact-form
 		padding: 40px 0
-	.contact-form_form 
+	.contact-form_form
 		.field-def, .btn
 			width: 100%
 		.field-def
@@ -283,19 +301,18 @@
 @media only screen and (min-width : 1024px)
 	/**/
 
-
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 1920px)
 
 	h1
-		font-size: 39px
+		font-size: 34px
 	h2
 		font-size: 29px
 	h3
 		font-size: 20px
 
 	body
-		font-size: 18px
+		font-size: 16px
 		line-height: 1.778
 
 	.bg-woman
@@ -312,31 +329,41 @@
 		margin-bottom: -85px
 
 	.main_banner
-		padding: 70px 0
+		padding: 40px 0 15px
 		background-image: url(../img/banner-1920.jpg)
+		background-position-x: 85%
+		background-position-y: 100%
+		background-size: cover
 	.main_banner-title
 		margin-bottom: 40px
 		padding-left: 30px
 		&:before
 			left: 0
+			width: 15px
+			height: 15px
 		&:nth-child(odd)
 			width: 360px
 		&:nth-child(even)
-			width: 600px
+			width: 610px
 	.main_banner-title_wrap
 		width: 100%
-	.main_banner-nav, .section-aside
-		bottom: 75px
+	.main_banner-nav
+		bottom: 30px
 		padding-right: 20px
+		nav
+			display: block
+		.btn
+			display: none
 		li
 			font-size: 15px
 			margin-bottom: 12px
-	.main_banner-nav
-		ul
-			width: 300px
 	.main_banner-header
 		margin-bottom: 25px
 		line-height: 1.4
+	.main_banner-arrow
+		width: 280px
+		right: 25%
+		top: 110px
 
 	.contact-form_header
 		margin-bottom: 0
@@ -435,6 +462,8 @@
 			margin-right: 90px
 
 	.contact-form_form
+		flex-flow: initial
+		justify-content: space-between
 		.field-search
 			padding-right: 400px
 	.contact-form_search
@@ -503,15 +532,23 @@
 		line-height: 1.9
 
 	.main_banner
-		padding: 80px
+		padding: 60px 0 30px
 	.main_banner-title
 		&:nth-child(odd)
 			width: 450px
 		&:nth-child(even)
 			width: 700px
+	.main_banner-nav ul
+		width: 300px
+		li a
+			padding-left: 50px
 	.main_banner-nav, .section-aside
 		bottom: 100px
 		padding-right: 100px
+	.main_banner-arrow
+		width: 350px
+		right: 27%
+		top: 155px
 
 	.section-footer 
 		p, .link

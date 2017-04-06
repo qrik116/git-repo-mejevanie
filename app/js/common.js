@@ -52,7 +52,7 @@ $(function(){
 			$this.addClass('active')
 			.closest('.row').find('.section-cart-wrap.active').fadeOut('fast', function(){
 				$(this).removeClass('active');
-				$(id).fadeIn('fast').removeAttr('style').addClass('active');
+				$(id).fadeIn('fast').css('display', 'block').addClass('active');
 			});
 		}
 	});
@@ -199,7 +199,7 @@ $(function(){
 		}
 	});
 
-	$(".main_banner-nav a[href*='#']").mPageScroll2id();
+	$(".main_banner-nav a[href*='#'], .to_search a[href*='#']").mPageScroll2id();
 
 	$('.open-modal').magnificPopup({
 		//delegate: 'a',
@@ -218,6 +218,31 @@ $(function(){
 			}
 		},
 		midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+	});
+
+	$('.section-with-scroll').css({
+		'max-height': $('.section-aside').height() + 'px',
+		'overflow': 'hidden'
+	}).perfectScrollbar({
+		maxScrollbarLength: 210,
+		wheelSpeed: .7
+	});
+
+
+	$('.main_banner-nav nav').attr('data-toggle', false).css('left', -$('.main_banner-nav nav').width());
+	$('.main_banner-nav .btn').on('click', function(event) {
+		event.preventDefault();
+		var $this = $(this),
+				$nav = $this.next('nav');
+		if ($this.attr('data-toggle') == "true"){
+			$nav.animate({'left': -$nav.width()}, 300);
+			$this.attr('data-toggle', false);
+		}
+		else {
+			$this.attr('data-toggle', true);
+			$nav.animate({'left': 0}, 300);
+		}
+
 	});
 	
 });

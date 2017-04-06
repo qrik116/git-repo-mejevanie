@@ -37,6 +37,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery.maskedinput/jquery.maskedinput.min.js',
 		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/libs/scroll2id/PageScroll2id.min.js',
+		'app/libs/perfect-scrollbar/perfect-scrollbar.jquery.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

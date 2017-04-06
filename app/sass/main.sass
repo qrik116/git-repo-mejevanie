@@ -40,7 +40,7 @@ p, h1, h2, h3, ul, li
 
 h1
 	font-weight: 600
-	font-size: 30px
+	font-size: 26px
 h2
 	font-size: 24px
 h3
@@ -53,7 +53,14 @@ a, a:focus
 aside
 	display: block
 
-.btn, input
+.btn
+	border: none
+	outline: none
+	background: none
+	color: #000
+	display: inline-block
+	position: relative
+input
 	border: none
 	outline: none
 	background: none
@@ -68,7 +75,18 @@ aside
 	width: 100%
 	text-align: center
 .btn-grey
-	background: #f0f0f0
+	background-color: #f0f0f0
+	color: #000
+.btn-orange
+	background-color: #ff8400
+	color: #fff
+	&:hover
+		background-color: #f39129
+		color: #fff
+		&:before
+			background-color: #f39129
+	&:before
+		background-color: #ff8400
 .btn.active
 	background: #67d740
 	color: #fff
@@ -95,14 +113,13 @@ aside
 	justify-content: center
 
 body
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
 	position: relative
 	line-height: 1.625
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
-	padding-top: 140px
 	color: $text-color
 
 .display_none
@@ -192,10 +209,10 @@ body
 
 .main_banner
 	position: relative
-	background: no-repeat url(../img/banner-1024.jpg) bottom / 100%
-	padding: 40px 0
+	background: no-repeat url(../img/banner-1024.jpg) bottom -75px right -90px
+	padding: 65px 0 35px
 .main_banner-header
-	margin-bottom: 60px
+	margin-bottom: 30px
 	text-transform: uppercase
 	b
 		font-weight: 800
@@ -204,7 +221,7 @@ body
 	bottom: 40px
 	left: 0
 	ul
-		width: 250px
+		width: 230px
 		li
 			text-transform: uppercase
 			margin-bottom: 10px
@@ -216,8 +233,6 @@ body
 				content: ''
 				height: 35px
 				width: 35px
-				-webkit-transform: rotate(45deg)
-				-ms-transform: rotate(45deg)
 				transform: rotate(45deg)
 				position: absolute
 				top: 8px
@@ -229,8 +244,40 @@ body
 				line-height: 50px
 				display: block
 				position: relative
-				padding-left: 30px
+				padding-left: 20px
 				transition: all .25s
+	.btn
+		margin-bottom: 20px
+		&[data-toggle="true"]
+			p span
+				display: none
+				&.cross
+					display: inline-block
+		p
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 12px
+			line-height: 40px
+			padding: 0 12px
+			position: relative
+			z-index: 2
+			cursor: pointer
+			background-color: inherit
+		.cross
+			background: no-repeat url(../img/cross-white.svg) center/100%
+			width: 20px
+			height: 20px
+			display: none
+			vertical-align: middle
+		&:before
+			content: ''
+			height: 28px
+			width: 28px
+			transform: rotate(45deg)
+			position: absolute
+			top: 6px
+			right: -14px
+			transition: all .25s
 .main_banner-nav_green, .section-aside_green
 	ul li
 		&.active
@@ -264,7 +311,7 @@ body
 		a
 			background: #f0f0f0
 .main_banner-nav_shadow, .section-aside_shadow
-	ul li
+	ul li, .btn
 		box-shadow: 0px 2px 4px 0px rgba(0, 0, 1, 0.21)
 		&:before
 			box-shadow: 2px 0px 4px 0px rgba(0, 0, 1, 0.21)
@@ -272,25 +319,40 @@ body
 	display: inline-block
 .main_banner-title
 	display: inline-block
-	margin-bottom: 65px
+	margin-bottom: 25px
 	vertical-align: top
 	text-align: left
 	position: relative
+	padding-left: 20px
 	&:before
 		content: url(../img/cross.svg)
 		display: inline-block
 		position: absolute
-		width: 15px
-		height: 15px
-		left: -30px
+		width: 10px
+		height: 10px
+		left: 0
 	&:nth-child(odd)
-		width: 270px
+		width: 300px
 	&:nth-child(even)
-		width: 340px
-		margin-left: 70px
+		width: 463px
+		margin-left: 15px
+	@media only screen and (min-width : 1024px) and (max-width : 1919px)
+		&:nth-last-child(-n+2)
+			margin-bottom: 0
+.main_banner-arrow
+	position: absolute
+	width: 200px
+	right: 138px
+	top: 121px
+	z-index: 2
 
 .link-wrap
 	text-align: left
+	@media only screen and (min-width : 1024px) and (max-width : 1919px)
+		position: absolute
+		top: 20px
+		right: 30px
+	
 .link
 	display: inline-block
 	text-decoration: underline
@@ -326,11 +388,14 @@ body
 
 .contact-form
 	text-align: center
-	padding: 43px 0
+	padding: 25px 0
 .contact-form-shadow, .shadow
 	position: relative
 	box-shadow: 0px 0px 10px 1px rgba(0, 0, 1, 0.21)
 .contact-form_form
+	display: flex
+	justify-content: center
+	flex-flow: wrap row
 	.field-def, .btn
 		text-transform: uppercase
 		width: 350px
@@ -402,6 +467,7 @@ body
 		margin-bottom: 30px
 		> div
 			position: relative
+			width: 100%
 		.fa-search
 			position: absolute
 			left: 40px
@@ -996,5 +1062,56 @@ body
 	padding-right: 15px
 .cor-p-l
 	padding-left: 15px
+
+.ps-container
+	& > .ps-scrollbar-y-rail
+		top: 0 !important
+		& > .ps-scrollbar-y
+			width: 14px
+			background-color: #76c32f
+			left: 0
+			&:before
+				margin-top: -3.5px
+				margin-left: -5px
+				content: ''
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAYAAADebrddAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyODczYmMyZS03OWY2LTg4NDctYmU1NC1jNjMwODBkYzkwZWEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDc5RTEzNjExQUExMTFFNzg1Q0RCN0ZDNkIzNTcxQ0YiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDc5RTEzNjAxQUExMTFFNzg1Q0RCN0ZDNkIzNTcxQ0YiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDNmZDg1NzYtNWZmOC03ZDQzLTkxODktNGEzNjAxZDYxOTE3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI4NzNiYzJlLTc5ZjYtODg0Ny1iZTU0LWM2MzA4MGRjOTBlYSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtjY09IAAAAiSURBVHjaYvz///8ZBiIBI1AxsWoZmBhIACxAPNScARBgAAT9C2sbz96sAAAAAElFTkSuQmCC)
+				background-position: center center
+				background-repeat: no-repeat
+				background-color: transparent
+				position: absolute
+				top: 50%
+				left: 50%
+				height: 7px
+				width: 10px
+		&:hover, &:active
+			.ps-scrollbar-y
+				width: 14px
+.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y
+	background-color: #76c32f
+
+.to_search
+	position: fixed
+	top: 50%
+	right: 0
+	border-top-left-radius: 5px
+	border-bottom-left-radius: 5px
+	height: 100px
+	width: 220px
+	display: flex
+	align-items: center
+	justify-content: center
+	a
+		text-align: center
+		span
+			text-align: left
+			margin-left: 10px
+			display: inline-block
+			width: 50%
+			font-size: 600px
+			font-size: 18px
+			line-height: 1.2
+		i
+			position: relative
+			bottom: 8px
 
 @import "media" // Всегда в конце	.Rectangle_76_copy_копия_21
