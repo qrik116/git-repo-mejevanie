@@ -249,11 +249,11 @@ body
 	.btn
 		margin-bottom: 20px
 		&[data-toggle="true"]
-			p span
+			> div span
 				display: none
 				&.cross
 					display: inline-block
-		p
+		div
 			text-transform: uppercase
 			font-weight: 700
 			font-size: 12px
@@ -261,8 +261,8 @@ body
 			padding: 0 12px
 			position: relative
 			z-index: 2
-			cursor: pointer
 			background-color: inherit
+			transition: all .25s
 		.cross
 			background: no-repeat url(../img/cross-white.svg) center/100%
 			width: 20px
@@ -398,7 +398,7 @@ body
 	flex-flow: wrap row
 	.field-def, .btn
 		text-transform: uppercase
-		width: 350px
+		width: 310px
 		border-radius: 50px
 		padding: 0 10px
 		text-align: center

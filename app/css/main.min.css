@@ -4810,11 +4810,11 @@ body {
         transition: all .25s; }
   .main_banner-nav .btn, .section-aside .btn {
     margin-bottom: 20px; }
-    .main_banner-nav .btn[data-toggle="true"] p span, .section-aside .btn[data-toggle="true"] p span {
+    .main_banner-nav .btn[data-toggle="true"] > div span, .section-aside .btn[data-toggle="true"] > div span {
       display: none; }
-      .main_banner-nav .btn[data-toggle="true"] p span.cross, .section-aside .btn[data-toggle="true"] p span.cross {
+      .main_banner-nav .btn[data-toggle="true"] > div span.cross, .section-aside .btn[data-toggle="true"] > div span.cross {
         display: inline-block; }
-    .main_banner-nav .btn p, .section-aside .btn p {
+    .main_banner-nav .btn div, .section-aside .btn div {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 12px;
@@ -4822,8 +4822,9 @@ body {
       padding: 0 12px;
       position: relative;
       z-index: 2;
-      cursor: pointer;
-      background-color: inherit; }
+      background-color: inherit;
+      -webkit-transition: all .25s;
+      transition: all .25s; }
     .main_banner-nav .btn .cross, .section-aside .btn .cross {
       background: no-repeat url(../img/cross-white.svg) center/100%;
       width: 20px;
@@ -4993,7 +4994,7 @@ body {
           flex-flow: wrap row; }
   .contact-form_form .field-def, .contact-form_form .btn {
     text-transform: uppercase;
-    width: 350px;
+    width: 310px;
     -webkit-border-radius: 50px;
             border-radius: 50px;
     padding: 0 10px;
