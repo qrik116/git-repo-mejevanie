@@ -6155,8 +6155,6 @@ body {
       margin-bottom: 25px; }
       .section-cart_body li:after, .section-cart_body li:before {
         top: 5px; }
-    .section-cart_body br {
-      display: none; }
   .section-footer {
     margin-bottom: -35px; }
   .section-cart-wrap .link {

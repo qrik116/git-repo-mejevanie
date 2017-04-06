@@ -41,6 +41,17 @@ $(function(){
 		});
 	}
 
+	// $('#m_2 .section-cart-wrap').each(function(index, el) {
+	// 	var height = 0,
+	// 			maxHeight = 0;
+	// 	$(this).find('.section-cart').each(function(index, el) {
+	// 		var $this = $(this);
+	// 		height = $this.height();
+	// 		if (height > maxHeight)
+	// 			maxHeight = height;
+	// 	}).height(maxHeight);
+	// });
+
 	setTdBg();
 
 	var tabs = '.section .section-nav li a, .section .section-aside li a, .section .section-pagination li a';
