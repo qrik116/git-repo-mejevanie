@@ -1088,7 +1088,9 @@ body
 				width: 14px
 .ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y
 	background-color: #76c32f
-
+.ps-container:hover, .ps-container
+	&.ps-in-scrolling.ps-y .ps-scrollbar-y-rail > .ps-scrollbar-y
+		width: 14px
 .to_search
 	position: fixed
 	top: 50%
