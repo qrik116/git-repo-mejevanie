@@ -1,4 +1,4 @@
-;"use sctict";
+;"use strict";
 $(function(){
 
 	var $sectionWith_opa = $('.section-with_opa');
@@ -22,9 +22,9 @@ $(function(){
 	$(".phone").mask("+7 (999) 999-99-99");
 
 	$('.number').bind("change keyup input click", function() {
-    if (this.value.match(/[^.\d]+/g)) {
-        this.value = this.value.replace(/[^.\d]+/g, '');
-    }
+		if (this.value.match(/[^.\d]+/g)) {
+				this.value = this.value.replace(/[^.\d]+/g, '');
+		}
 	});
 
 	$('.section .btn').on('click', function(event) {
@@ -67,9 +67,17 @@ $(function(){
 		}
 	});
 
-	$( ".select" ).selectmenu();
+	$( ".select" ).selectmenu({
+		open: function( event, ui ) {
+			$(this).next().css('z-index', 1000);
+		},
+		close: function( event, ui ) {
+			$(this).next().removeAttr('style');
+		},
+	});
 	
 
+	var animSpeed = 200;
 	$('.link-slide').on('click', function(event) {
 		event.preventDefault();
 		var $this = $(this),
@@ -82,24 +90,24 @@ $(function(){
 			$this.attr('data-toggle', 'false');
 
 		if ($this.attr('data-toggle') == 'true'){
-			$this.attr('data-toggle', 'false').text('подробнее').parent().next('.link-descr').slideUp(400);
+			$this.attr('data-toggle', 'false').text('подробнее').parent().next('.link-descr').slideUp(animSpeed);
 			if ($this.parent().hasClass('section_block')){
 				$this.parent().attr('data-toggle', 'false')
-				.animate({'margin-bottom': oldMb}, 400).next().css('transform', 'translate(0, -'+$this.parent().next().innerHeight()+'px)').slideUp(400);
+				.animate({'margin-bottom': oldMb}, animSpeed).next().css('transform', 'translate(0, -'+$this.parent().next().innerHeight()+'px)').slideUp(animSpeed/2);
 			}
 		}	else {
 			if ($this.parent().hasClass('section_block')){
 				if ($this.attr('data-toggle') == 'false'){
-					$this.closest('.section_wrap').find('.link-descr').css('transform', 'translate(0, 0)').slideUp(400)
-						.prev().animate({'margin-bottom': oldMb}, 400).attr('data-toggle', 'false').find('.link').text('подробнее').attr('data-toggle', 'false');
+					$this.closest('.section_wrap').find('.link-descr').css('transform', 'translate(0, 0)').slideUp(animSpeed)
+						.prev().animate({'margin-bottom': oldMb}, animSpeed).attr('data-toggle', 'false').find('.link').text('подробнее').attr('data-toggle', 'false');
 				}
 
-				$this.parent().animate({'margin-bottom': $this.parent().next().css('transform', 'translate(0, -'+($this.parent().next().innerHeight()+25)+'px)').innerHeight()}, 400, function(){
-					$(this).next().slideDown(200);
+				$this.parent().animate({'margin-bottom': $this.parent().next().css('transform', 'translate(0, -'+($this.parent().next().innerHeight()+25)+'px)').innerHeight()}, animSpeed, function(){
+					$(this).next().slideDown(animSpeed/2);
 				})
 				.attr('data-toggle', 'true');
 			}
-			$this.attr('data-toggle', 'true').text('свернуть').parent().next('.link-descr').slideDown(400);
+			$this.attr('data-toggle', 'true').text('свернуть').parent().next('.link-descr').slideDown(animSpeed);
 			
 		}
 
@@ -189,7 +197,27 @@ $(function(){
 		} else {
 			$this.parent().find('.active').next().children('a').trigger('click');
 		}
+	});
 
+	$(".main_banner-nav a[href*='#']").mPageScroll2id();
+
+	$('.open-modal').magnificPopup({
+		//delegate: 'a',
+		removalDelay: 500, //delay removal by X to allow out-animation
+		callbacks: {
+			beforeOpen: function() {
+				this.st.mainClass = this.st.el.attr('data-effect');
+			},
+			open: function (){
+				$('body').css('overflow', 'hidden');
+				$(this.items[0].src).closest('.mfp-container').css('overflow', 'auto');
+			},
+			close: function (){
+				$('body').removeAttr('style');
+				$(this.items[0].src).closest('.mfp-container').removeAttr('style');
+			}
+		},
+		midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 	});
 	
 });

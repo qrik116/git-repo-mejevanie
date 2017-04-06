@@ -21,12 +21,12 @@ gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
 	])
-	// .pipe(concat('common.min.js'))
-	.pipe(minify({
-		ext:{
-			min:'.min.js'
-		},
-	}))
+	.pipe(concat('common.min.js'))
+	// .pipe(minify({
+	// 	ext:{
+	// 		min:'.min.js'
+	// 	},
+	// }))
 	.pipe(gulp.dest('app/js'));
 });
 
@@ -35,9 +35,29 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/jquery-1.11.0.min.js',
 		'app/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js',
 		'app/libs/jquery.maskedinput/jquery.maskedinput.min.js',
+		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
+		'app/libs/scroll2id/PageScroll2id.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
+	.pipe(concat('scripts.min.js'))
+	.pipe(gulp.dest('app/js'))
 	.pipe(concat('scripts.js'))
+	.pipe(gulp.dest('app/js'))
+	// .pipe(minify({
+	// 	ext:{
+	// 		min:'.min.js'
+	// 	},
+	// }))
+	// .pipe(uglify()) // Минимизировать весь js (на выбор)
+	.pipe(gulp.dest('app/js'))
+	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('js-build', function() {
+	return gulp.src([
+		'app/js/scripts.js',
+		])
+	//.pipe(concat('scripts.min.js'))
 	.pipe(minify({
 		ext:{
 			min:'.min.js'
@@ -45,7 +65,6 @@ gulp.task('js', ['common-js'], function() {
 	}))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
 	.pipe(gulp.dest('app/js'))
-	.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('browser-sync', function() {
@@ -84,7 +103,7 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+gulp.task('build', ['removedist', 'imagemin', 'sass', 'js-build'], function() {
 
 	var buildFiles = gulp.src([
 		'app/*.html',

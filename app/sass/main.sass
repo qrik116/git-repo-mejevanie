@@ -105,6 +105,34 @@ body
 	padding-top: 140px
 	color: $text-color
 
+.display_none
+	display: none
+
+.mfp-move-from-top .mfp-content
+	vertical-align: middle
+	text-align: center
+#modal-popup
+	display: inline-block
+	margin: 0 auto
+	text-align: left
+	padding: 70px 40px
+	background: #fff
+	h2
+		text-transform: uppercase
+		font-size: 30px
+		margin-top: 0
+		text-align: center
+	.help-block
+		margin-bottom: 20px
+		margin-top: -10px
+	.mfp-close
+		font-size: 40px
+		width: 60px
+		height: 60px
+		color: #000
+	.contact-form
+		padding-bottom: 0
+
 .bg-transparent
 	background-color: transparent
 	color: #000
@@ -656,6 +684,7 @@ body
 		width: 350px
 		top: -10px
 		padding: 0 45px
+		background: #fff
 		&:after
 			position: absolute
 			content: '\f107'
@@ -842,20 +871,24 @@ body
 	border-style: solid
 	border-color: #ff8400
 	border-top: none
-	&:after, &:before
+	&:before
 		position: absolute
 		content: ''
-		width: 3px
+		width: 100%
 		height: 40px
 		display: block
-		background-color: #ff8400
+		background-color: transparent
 		top: -30px
-	&:after
-		right: 0
-	&:before
+		border-width: 3px
+		border-style: solid
+		border-color: #ff8400
+		border-bottom: none
+		border-top: none
+		background: #f0f0f0
 		left: 0
 .ui-menu-item
 	border-bottom: 1px solid  #ff8400
+	background-color: #f0f0f0
 	&:last-child
 		border: none
 .ui-menu-item .ui-state-active
