@@ -210,7 +210,7 @@ $(function(){
 		}
 	});
 
-	$(".main_banner-nav a[href*='#'], .to_search a[href*='#']").mPageScroll2id();
+	$(".main_banner-nav a[href*='#'], .to_search a[href*='#'], .contact-form_search a[href*='#']").mPageScroll2id();
 
 	$('.open-modal').magnificPopup({
 		//delegate: 'a',
